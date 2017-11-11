@@ -37,12 +37,15 @@ export default class App extends Component {
   }
   componentDidMount () {
     this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
+      // console.log(user.uid);
       if (user) {
+        console.log("user found");
         this.setState({
           authed: true,
           loading: false,
         })
       } else {
+        console.log("no user");
         this.setState({
           authed: false,
           loading: false

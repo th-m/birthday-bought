@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import BirthdayForm from 'protected/birthdayForm'
+import BirthdayForm  from './BirthdayForm'
 
-export default class Dashboard extends Component {
+export default class Dashboard extends React.Component {
   render () {
+    
     return (
       <div>
-        You're logged in. Here are your birthdays.
+        <BirthdayForm />
       </div>
     )
   }

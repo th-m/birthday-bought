@@ -25,3 +25,9 @@ export function saveUser (user) {
     })
     .then(() => user)
 }
+export function saveForm (data,uid){
+  // console.log(data);
+  return ref.child(`forms/${uid}/info`)
+    .set(data)
+    .then(() => data)
+}
